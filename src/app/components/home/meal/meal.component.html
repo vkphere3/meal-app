@@ -20,9 +20,11 @@
     </mat-card-content>
 </mat-card>
 
-<div>
-    <button  mat-raised-button color="primary" mat-button [matMenuTriggerFor]="aboveMenu">Meals</button>
+<div style="margin-top: 16px;">
+    <button mat-raised-button style="background-color: #FFE200;color: #000000; margin: 16px;" mat-button
+        [matMenuTriggerFor]="aboveMenu">Meals</button>
     <mat-menu #aboveMenu="matMenu" yPosition="above">
-        <button *ngFor="let meal of availableList" mat-menu-item (click)="selectMeal(meal)">{{meal.type}}</button>
+        <button style="background-color: #FFE200;color: #000000; margin-bottom: 5px;" *ngFor="let meal of availableList"
+            mat-menu-item (click)="selectMeal(meal)">{{meal.type}}</button>
     </mat-menu>
 </div>

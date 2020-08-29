@@ -12,5 +12,19 @@ th {
 }
 
 tr:nth-child(even) {
-  background-color: #dddddd;
+  background-color: #eceff1;
+}
+
+::ng-deep .mat-checkbox-checked .mat-checkbox-background {
+  background-color: #253237 !important;
+}
+
+::ng-deep .mat-menu-content:not(:empty) {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
+::ng-deep .mat-tab-group.mat-primary .mat-ink-bar,
+.mat-tab-nav-bar.mat-primary .mat-ink-bar {
+  background: #ffe200;
 }

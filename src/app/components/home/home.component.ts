@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {availableListFile} from './../../../assets/availableList';
+import { availableListFile } from './../../../assets/availableList';
 
 @Component({
   selector: 'app-home',

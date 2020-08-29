@@ -1,15 +1,19 @@
-<div style="margin-bottom: 10px;" *ngFor="let meal of plannedMeal">
-    <h2>{{meal.type}}</h2>
-    <table>
-        <tr>
-            <th>Food</th>
-            <th>Calories</th>
-            <th>Quantity</th>
-        </tr>
-        <tr *ngFor="let option of meal.options">
-            <td>{{option.food}}</td>
-            <td>{{option.calories}}</td>
-            <td>{{option.quantity}}</td>
-        </tr>
-    </table>
+<div id="parentdiv">
+    <div style="margin-bottom: 10px;" *ngFor="let meal of plannedMeal">
+        <h2>{{meal.type}}</h2>
+        <table>
+            <tr>
+                <th>Food</th>
+                <th>Calories</th>
+                <th>Quantity</th>
+            </tr>
+            <tr *ngFor="let option of meal.options">
+                <td>{{option.food}}</td>
+                <td>{{option.calories}}</td>
+                <td>{{option.quantity}}</td>
+            </tr>
+        </table>
+    </div>
 </div>
+
+<button mat-raised-button style="background-color: #FFE200;color: #000000; margin: 16px;" mat-button (click)="downloadPDF()">Save</button>

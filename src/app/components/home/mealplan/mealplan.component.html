@@ -1,4 +1,4 @@
-<div id="parentdiv">
+<div id="parentdiv" style="margin: 10px;">
     <div style="margin-bottom: 10px;" *ngFor="let meal of plannedMeal">
         <h2>{{meal.type}}</h2>
         <table>
@@ -17,5 +17,7 @@
     <br />
 </div>
 
-<button mat-raised-button style="background-color: #FFE200;color: #000000; margin: 16px;" mat-button
-    (click)="downloadPDF()">Save</button>
+<button mat-raised-button style="background-color: #FFE200;color: #000000; margin: 16px; float:right" mat-button
+    (click)="downloadPDF()"><span class="material-icons">
+        get_app
+    </span></button>

@@ -1,0 +1,28 @@
+<mat-card>
+    <mat-card-content>
+        <h2>{{selectedMeal.type}}</h2>
+        <table>
+            <tr>
+                <th>Food</th>
+                <th>Calories</th>
+            </tr>
+            <tr *ngFor="let option of selectedMeal.options">
+
+                <td>
+                    <mat-checkbox (click)="selcetedCheckbox(selectedMeal.type, option)" [(ngModel)]="option.selected">
+                        {{option.food}}
+                    </mat-checkbox>
+                </td>
+                <td>{{option.calories}}</td>
+            </tr>
+        </table>
+
+    </mat-card-content>
+</mat-card>
+
+<div>
+    <button  mat-raised-button color="primary" mat-button [matMenuTriggerFor]="aboveMenu">Meals</button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button *ngFor="let meal of availableList" mat-menu-item (click)="selectMeal(meal)">{{meal.type}}</button>
+    </mat-menu>
+</div>

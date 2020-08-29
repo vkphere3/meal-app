@@ -1,0 +1,13 @@
+<mat-tab-group>
+    <mat-tab label="Meal">
+        <app-meal (meals)="receiveSelectedMeals($event)" [availableList]="availableList" [selectedMeal]="selectedMeal">
+        </app-meal>
+    </mat-tab>
+    <mat-tab label="Quantity">
+        <app-quantity [plannedMeal]="plannedMeal"></app-quantity>
+    </mat-tab>
+
+    <mat-tab label="Meal Plan">
+        <app-mealplan [plannedMeal]="plannedMeal"></app-mealplan>
+    </mat-tab>
+</mat-tab-group>

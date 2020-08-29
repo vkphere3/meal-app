@@ -21,7 +21,7 @@
 </mat-card>
 
 <div style="margin-top: 16px;">
-    <button mat-raised-button style="background-color: #FFE200;color: #000000; margin: 16px;" mat-button
+    <button mat-raised-button style="background-color: #FFE200;color: #000000; margin: 16px; float:right;" mat-button
         [matMenuTriggerFor]="aboveMenu">Meals</button>
     <mat-menu #aboveMenu="matMenu" yPosition="above">
         <button style="background-color: #FFE200;color: #000000; margin-bottom: 5px;" *ngFor="let meal of availableList"

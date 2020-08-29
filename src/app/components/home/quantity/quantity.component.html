@@ -1,22 +1,26 @@
 <!-- {{countCalories}} -->
-<table *ngFor="let meal of plannedMeal">
-    <tr>
-        <td colspan="3">
-            <h2>{{meal.type}}</h2>
-        </td>
-    </tr>
+<mat-card>
+    <mat-card-content>
+        <table *ngFor="let meal of plannedMeal">
+            <tr>
+                <td colspan="3">
+                    <h2>{{meal.type}}</h2>
+                </td>
+            </tr>
 
-    <tr>
-        <th>Food</th>
-        <th>Calories</th>
-        <th>Quantity</th>
-    </tr>
-    <tr *ngFor="let option of meal.options">
-        <td>{{option.food}}</td>
-        <td>{{option.calories}}</td>
-        <td>
-            <input type="number" min=0 matInput maxlength="3" [(ngModel)]="option.quantity">
-        </td>
+            <tr>
+                <th>Food</th>
+                <th>Calories</th>
+                <th>Quantity</th>
+            </tr>
+            <tr *ngFor="let option of meal.options">
+                <td>{{option.food}}</td>
+                <td>{{option.calories}}</td>
+                <td>
+                    <input type="number" min=0 matInput maxlength="3" [(ngModel)]="option.quantity">
+                </td>
 
-    </tr>
-</table>
+            </tr>
+        </table>
+    </mat-card-content>
+</mat-card>
